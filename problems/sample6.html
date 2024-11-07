@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mark1=parseInt(window.prompt("Enter the mark for 1st sub"));
+var mark2=parseInt(window.prompt("Enter the mark for 2nd sub"));
+var mark3=parseInt(window.prompt("Enter the mark for 3rd sub"));
+var total=mark1+mark2+mark3;
+var avg=total/3;
+if(avg>=50){
+    document.write("Pass");"<br>"
+    if(avg>90){
+        document.write("Grade A");
+    }
+    else if(avg<=90 && avg>80){
+        document.write("Grade B");
+    }
+    else if(avg<=80 && avg>70){
+        document.write("Grade C");
+    }
+    else if(avg<=70 && avg>60){
+        document.write("Grade D");
+    }
+    else{
+        document.write("Grade E");
+    }
+}
+else{
+    document.write("Fail");
+}
+</script>
+</body>
+</html>
