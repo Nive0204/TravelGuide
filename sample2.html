@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sample3.css">
+    <title>Form Validation using JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Registration Form</h2>
+        </div>
+        <form action=""  id="form" class="form">
+            <div class="form-group">
+                <input type="text" placeholder="username" id = "username" autocomplete="off" >
+                <span></span>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="email" id = "email" autocomplete="off" required>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="password" id = "password" autocomplete="off" required>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="confirm password" id = "cpassword" autocomplete="off">
+                <span></span>
+            </div>
+            <button id = 'submit'>Submit</button>
+        </form>
+    </div>
+    <script>
+        function validate(event){
+            const name=document.getElementById("username");
+            const mail=document.getElementById("email");
+            const pass=document.getElementById("password");
+            const cpass=document.getElementById("cpassword");
+            if(name.value==""){
+                alert("Please enter a valid name");
+                return;
+            }
+           
+            if(mail.value==""){
+                alert("Please enter a valid email id");
+                return;
+            }
+          
+            if(pass.value==""){
+                alert("Please enter a valid password");
+                return;
+            }
+        
+            if(cpass.value==""){
+                alert("Please enter  password again");
+                return;
+            }
+            if(cpass.value!=pass.value){
+                alert("Check the password!!Doesn't match");
+                return;
+            }
+
+            alert("form Submitted successfully");
+        }
+        document.getElementById('form').addEventListener('submit',validate);
+    </script>
+</body>
+</html>
+
